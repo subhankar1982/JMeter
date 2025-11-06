@@ -38,7 +38,9 @@ This test plan simulates multiple users accessing a web application.
 - Think time simulation
 
 **Configuration Variables:**
-- `BASE_URL`: Target web application URL (default: `http://localhost:8080`)
+- `HOST`: Target server hostname (default: `localhost`)
+- `PORT`: Target server port (default: `8080`)
+- `PROTOCOL`: Connection protocol (default: `http`)
 - `NUM_THREADS`: Number of concurrent users (default: 10)
 - `RAMP_TIME`: Time to ramp up all threads in seconds (default: 60)
 - `DURATION`: Test duration in seconds (default: 300)
@@ -53,7 +55,9 @@ jmeter -n -t test-plans/http/http_performance_test.jmx -l results/http_results.j
 
 # Override variables
 jmeter -n -t test-plans/http/http_performance_test.jmx \
-  -JBASE_URL=http://example.com \
+  -JHOST=example.com \
+  -JPORT=80 \
+  -JPROTOCOL=http \
   -JNUM_THREADS=20 \
   -l results/http_results.jtl
 ```

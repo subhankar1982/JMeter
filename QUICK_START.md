@@ -45,14 +45,18 @@ jmeter -n -t test-plans/http/http_performance_test.jmx \
 ### Change Target URL
 ```bash
 jmeter -n -t test-plans/http/http_performance_test.jmx \
-  -JBASE_URL=http://your-server.com \
+  -JHOST=your-server.com \
+  -JPORT=80 \
+  -JPROTOCOL=https \
   -l results/http_test.jtl
 ```
 
 ### Multiple Parameters
 ```bash
 jmeter -n -t test-plans/http/http_performance_test.jmx \
-  -JBASE_URL=http://your-server.com \
+  -JHOST=your-server.com \
+  -JPORT=443 \
+  -JPROTOCOL=https \
   -JNUM_THREADS=100 \
   -JRAMP_TIME=120 \
   -JDURATION=600 \
