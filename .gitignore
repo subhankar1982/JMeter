@@ -1,0 +1,25 @@
+# JMeter Result Files
+*.jtl
+*.log
+results/*.jtl
+results/*.log
+results/*.csv
+results/*.xml
+
+# JMeter backup files
+*.jmx~
+
+# JMeter temporary files
+jmeter.log
+jmeter-server.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
