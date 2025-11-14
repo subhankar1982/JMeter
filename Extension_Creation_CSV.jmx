@@ -32,20 +32,20 @@
         <boolProp name="CacheManager.controlledByThread">false</boolProp>
       </CacheManager>
       <hashTree/>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group">
         <intProp name="ThreadGroup.num_threads">1</intProp>
         <intProp name="ThreadGroup.ramp_time">1</intProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller">
-          <stringProp name="LoopController.loops">1</stringProp>
+          <stringProp name="LoopController.loops">2</stringProp>
           <boolProp name="LoopController.continue_forever">false</boolProp>
         </elementProp>
       </ThreadGroup>
       <hashTree>
         <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Recording Controller"/>
         <hashTree>
-          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" enabled="true">
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
           </TransactionController>
           <hashTree>
@@ -4995,7 +4995,7 @@
                 <collectionProp name="Arguments.arguments">
                   <elementProp name="" elementType="HTTPArgument">
                     <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                    <stringProp name="Argument.value">{&quot;extensionNumber&quot;:&quot;7000&quot;,&quot;featureLevel&quot;:&quot;&quot;,&quot;customer&quot;:&quot;none&quot;,&quot;description&quot;:&quot;SIP 7000&quot;,&quot;domainName&quot;:&quot;DEFAULT&quot;,&quot;commonServiceProfile&quot;:0,&quot;phoneLanguage&quot;:&quot;fy&quot;,&quot;bossSecretary&quot;:true,&quot;homeAreaCode&quot;:&quot;&quot;,&quot;allowMitelDialerSoftphone&quot;:1,&quot;protocol&quot;:&quot;&quot;,&quot;macAddress&quot;:&quot;&quot;,&quot;bluStarClientModel&quot;:&quot;NONE&quot;,&quot;ednExtension&quot;:true,&quot;allowThirdPartyClient&quot;:false,&quot;allowVideoFunctionality&quot;:false,&quot;enableMMCFunctionality&quot;:false,&quot;backupAnsweringPositionNumber&quot;:&quot;&quot;,&quot;allowSecurityException&quot;:true,&quot;maximumChargingCost&quot;:&quot;&quot;,&quot;ipExtensionType&quot;:&quot;IPManualLogin&quot;,&quot;freeOnSecondLine&quot;:0,&quot;allowExtensioninCallParkPoolGroup&quot;:false,&quot;nameIdentity&quot;:{&quot;firstName&quot;:&quot;7000&quot;,&quot;lastName&quot;:&quot;SIP&quot;,&quot;includeinDialbyNameDatabase&quot;:false,&quot;namePresentationOrder&quot;:&quot;1&quot;,&quot;restrictPresentation&quot;:false,&quot;information&quot;:&quot;&quot;},&quot;welcomeAnnouncement&quot;:&quot;&quot;,&quot;continuousAnnouncement&quot;:&quot;&quot;,&quot;authorizationCodes&quot;:[{&quot;authorizationCode&quot;:&quot;123456&quot;,&quot;hashType&quot;:&quot;SHA256&quot;,&quot;callLoggingCode&quot;:&quot;123456&quot;,&quot;customer&quot;:&quot;none&quot;,&quot;newCustomer&quot;:&quot;none&quot;,&quot;commonServiceProfile&quot;:0,&quot;restrictUsageToThisExtensionOnly&quot;:false}],&quot;ringSignals&quot;:[],&quot;publicCLINumber&quot;:{&quot;publicCLINumber&quot;:&quot;&quot;,&quot;activateCLInumber&quot;:false,&quot;typeOfCLInumber&quot;:&quot;0&quot;,&quot;publicCLINumberPresentationRestriction&quot;:false},&quot;parallelRinging&quot;:{&quot;mdir&quot;:&quot;&quot;,&quot;secondaryDirectoryNumber1&quot;:&quot;&quot;,&quot;secondaryDirectoryNumber2&quot;:&quot;&quot;,&quot;delaySeizure&quot;:&quot;&quot;},&quot;aliasNumberToUse&quot;:&quot;1&quot;,&quot;individualAliasNumber&quot;:&quot;&quot;,&quot;huntGroup&quot;:[],&quot;callPickupGroup&quot;:&quot;&quot;,&quot;groupDoNotDisturb&quot;:&quot;&quot;,&quot;terminalPhoneType&quot;:&quot;OTHER&quot;}</stringProp>
+                    <stringProp name="Argument.value">{&quot;extensionNumber&quot;:&quot;${Extension}&quot;,&quot;featureLevel&quot;:&quot;&quot;,&quot;customer&quot;:&quot;none&quot;,&quot;description&quot;:&quot;SIP ${Extension}&quot;,&quot;domainName&quot;:&quot;DEFAULT&quot;,&quot;commonServiceProfile&quot;:0,&quot;phoneLanguage&quot;:&quot;fy&quot;,&quot;bossSecretary&quot;:true,&quot;homeAreaCode&quot;:&quot;&quot;,&quot;allowMitelDialerSoftphone&quot;:1,&quot;protocol&quot;:&quot;&quot;,&quot;macAddress&quot;:&quot;&quot;,&quot;bluStarClientModel&quot;:&quot;NONE&quot;,&quot;ednExtension&quot;:true,&quot;allowThirdPartyClient&quot;:false,&quot;allowVideoFunctionality&quot;:false,&quot;enableMMCFunctionality&quot;:false,&quot;backupAnsweringPositionNumber&quot;:&quot;&quot;,&quot;allowSecurityException&quot;:true,&quot;maximumChargingCost&quot;:&quot;&quot;,&quot;ipExtensionType&quot;:&quot;IPManualLogin&quot;,&quot;freeOnSecondLine&quot;:0,&quot;allowExtensioninCallParkPoolGroup&quot;:false,&quot;nameIdentity&quot;:{&quot;firstName&quot;:&quot;7000&quot;,&quot;lastName&quot;:&quot;SIP&quot;,&quot;includeinDialbyNameDatabase&quot;:false,&quot;namePresentationOrder&quot;:&quot;1&quot;,&quot;restrictPresentation&quot;:false,&quot;information&quot;:&quot;&quot;},&quot;welcomeAnnouncement&quot;:&quot;&quot;,&quot;continuousAnnouncement&quot;:&quot;&quot;,&quot;authorizationCodes&quot;:[{&quot;authorizationCode&quot;:&quot;123456&quot;,&quot;hashType&quot;:&quot;SHA256&quot;,&quot;callLoggingCode&quot;:&quot;123456&quot;,&quot;customer&quot;:&quot;none&quot;,&quot;newCustomer&quot;:&quot;none&quot;,&quot;commonServiceProfile&quot;:0,&quot;restrictUsageToThisExtensionOnly&quot;:false}],&quot;ringSignals&quot;:[],&quot;publicCLINumber&quot;:{&quot;publicCLINumber&quot;:&quot;&quot;,&quot;activateCLInumber&quot;:false,&quot;typeOfCLInumber&quot;:&quot;0&quot;,&quot;publicCLINumberPresentationRestriction&quot;:false},&quot;parallelRinging&quot;:{&quot;mdir&quot;:&quot;&quot;,&quot;secondaryDirectoryNumber1&quot;:&quot;&quot;,&quot;secondaryDirectoryNumber2&quot;:&quot;&quot;,&quot;delaySeizure&quot;:&quot;&quot;},&quot;aliasNumberToUse&quot;:&quot;1&quot;,&quot;individualAliasNumber&quot;:&quot;&quot;,&quot;huntGroup&quot;:[],&quot;callPickupGroup&quot;:&quot;&quot;,&quot;groupDoNotDisturb&quot;:&quot;&quot;,&quot;terminalPhoneType&quot;:&quot;OTHER&quot;}</stringProp>
                     <stringProp name="Argument.metadata">=</stringProp>
                   </elementProp>
                 </collectionProp>
@@ -6189,7 +6189,7 @@
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
-          <ResultCollector guiclass="SimpleDataWriter" testclass="ResultCollector" testname="Simple Data Writer" enabled="true">
+          <ResultCollector guiclass="SimpleDataWriter" testclass="ResultCollector" testname="Simple Data Writer">
             <boolProp name="ResultCollector.error_logging">false</boolProp>
             <objProp>
               <name>saveConfig</name>
@@ -6226,14 +6226,14 @@
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
-          <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Duration Assertion" enabled="true">
+          <DurationAssertion guiclass="DurationAssertionGui" testclass="DurationAssertion" testname="Duration Assertion">
             <stringProp name="DurationAssertion.duration">3896</stringProp>
           </DurationAssertion>
           <hashTree/>
-          <SizeAssertion guiclass="SizeAssertionGui" testclass="SizeAssertion" testname="Size Assertion" enabled="true">
+          <SizeAssertion guiclass="SizeAssertionGui" testclass="SizeAssertion" testname="Size Assertion">
             <stringProp name="Assertion.test_field">SizeAssertion.response_network_size</stringProp>
             <stringProp name="SizeAssertion.size">4000</stringProp>
-            <intProp name="SizeAssertion.operator">6</intProp>
+            <intProp name="SizeAssertion.operator">4</intProp>
           </SizeAssertion>
           <hashTree/>
           <ResultCollector guiclass="AssertionVisualizer" testclass="ResultCollector" testname="Assertion Results" enabled="true">
@@ -6287,7 +6287,7 @@
           </CSVDataSet>
           <hashTree/>
         </hashTree>
-        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree">
           <boolProp name="ResultCollector.error_logging">false</boolProp>
           <objProp>
             <name>saveConfig</name>
@@ -6324,7 +6324,7 @@
           <stringProp name="filename"></stringProp>
         </ResultCollector>
         <hashTree/>
-        <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
+        <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table">
           <boolProp name="ResultCollector.error_logging">false</boolProp>
           <objProp>
             <name>saveConfig</name>
