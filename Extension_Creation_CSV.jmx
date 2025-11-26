@@ -9,18 +9,18 @@
       <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
     </TestPlan>
     <hashTree>
-      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
-        <collectionProp name="Arguments.arguments"/>
-      </Arguments>
-      <hashTree/>
       <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults">
-        <stringProp name="HTTPSampler.domain">${serverIP]</stringProp>
+        <stringProp name="HTTPSampler.domain">${serverIP}</stringProp>
         <stringProp name="HTTPSampler.protocol">https</stringProp>
         <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
           <collectionProp name="Arguments.arguments"/>
         </elementProp>
         <stringProp name="HTTPSampler.implementation"></stringProp>
       </ConfigTestElement>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+        <collectionProp name="Arguments.arguments"/>
+      </Arguments>
       <hashTree/>
       <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager">
         <collectionProp name="CookieManager.cookies"/>
@@ -3506,7 +3506,7 @@
               <hashTree/>
             </hashTree>
           </hashTree>
-          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" enabled="true">
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController">
             <boolProp name="TransactionController.includeTimers">false</boolProp>
           </TransactionController>
           <hashTree>
@@ -6191,7 +6191,7 @@
             <boolProp name="recycle">true</boolProp>
             <boolProp name="stopThread">false</boolProp>
             <stringProp name="shareMode">shareMode.all</stringProp>
-            <stringProp name="TestPlan.comments">username and password</stringProp>
+            <stringProp name="TestPlan.comments">username, server IP and password</stringProp>
           </CSVDataSet>
           <hashTree/>
         </hashTree>
